@@ -11,12 +11,11 @@ class LoginController extends Controller
 {
 
 
-    function tokenTest()
-    {
-        return "Token Is Ok";
-    }
     function onLogin(Request $request)
     {
+
+        $token= $request->input('access_token');
+        $key=env('TOKEN_KEY');
 
        $username=$request->input('username');
        $password=$request->input('password');
@@ -30,7 +29,7 @@ class LoginController extends Controller
             'site' => 'http://demo.com',
             'user' => $username,
             'iat' => time(),
-            'exp' => time()+60
+            'exp' => time()+120000
 
 
         ];

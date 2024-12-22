@@ -10,3 +10,5 @@ class RegistrationModel extends Model
 
     protected $fillable = ['firstname', 'lastname', 'city', 'username', 'password', 'gender'];
 }
+
+

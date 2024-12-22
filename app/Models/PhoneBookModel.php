@@ -8,10 +8,10 @@ class PhoneBookModel extends Model
 {
     protected $table='phone_book_details';
 
-    protected $primarykey='id';
 
-    public $incrementing ='true';
-    protected $keyType='int';
 
-    public $timestamps=false;
+    protected $fillable = ['username', 'phone_number_one', 'phone_number_two', 'name', 'email'];
 }
+
+
+
