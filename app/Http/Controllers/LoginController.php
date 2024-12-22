@@ -9,6 +9,12 @@ use Firebase\JWT\Key;
 
 class LoginController extends Controller
 {
+
+
+    function tokenTest()
+    {
+        return "Token Is Ok";
+    }
     function onLogin(Request $request)
     {
 
@@ -24,7 +30,7 @@ class LoginController extends Controller
             'site' => 'http://demo.com',
             'user' => $username,
             'iat' => time(),
-            'exp' => time()+3600
+            'exp' => time()+60
 
 
         ];
