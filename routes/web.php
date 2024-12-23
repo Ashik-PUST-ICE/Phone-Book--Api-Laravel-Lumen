@@ -20,3 +20,7 @@ $router->post('/select',['middleware'=>'auth','uses'=>'PhoneBookController@onSel
 
 $router->post('/delete',['middleware'=>'auth','uses'=>'PhoneBookController@onDelete']);
 
+$router->post('/update',['middleware'=>'auth','uses'=>'PhoneBookController@onUpdate']);
+
+
+
